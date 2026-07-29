@@ -1,0 +1,8 @@
+output "public_key_out" {
+  value = tls_private_key.mykey.public_key_openssh
+}
+
+output "private_key_out" {
+  value     = tls_private_key.mykey.private_key_pem
+  sensitive = true
+}
